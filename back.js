@@ -19,17 +19,17 @@ db.serialize(() =>{
 
     
     db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Poke Bowl Saumon", "./Images/poke-bowl-saumon-detox.png", 12, "Saumon, Haricot",5);
-    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Poke Bowl Daurade", "./Images/poke-bowl-daurade.png", 15, "Saumon, Haricot",5);
-    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Maki Yellow Ponzu", "./Images/maki-yellowtail-ponzu.png", 12, "Saumon, Haricot",4);
-    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Maki thon spicy", "./Images/maki-thon-spicy.png", 15, "Saumon, Haricot",4);
-    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Lunch Box 3", "./Images/lunch-box-3.png", 12, "Saumon, Haricot",1);
-    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Lunch Box 6", "./Images/lunch-box-6.png", 12, "Saumon, Haricot",1);
-    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Gourmet Mix", "./Images/gourmet-mix.png", 12, "Saumon, Haricot",3);
-    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "California saumon wasabi", "./Images/california-saumon-a-wasabi-de-.png", 12, "Saumon, Haricot",3);
-    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "ceviche de Daurade", "./Images/ceviche-de-daurade-a-leche-de-.png", 12, "Saumon, Haricot",3);
-    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Sashimi Yellow", "./Images/sashimi-yellowtail.png", 12, "Saumon, Haricot",2);
-    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Sushi Yellow", "./Images/sushi-yellowtail.png", 12, "Saumon, Haricot",2);
-    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Sushi Yellow tail Safran", "./Images/sushi-yellowtail-safran-a-fleu.png", 12, "Saumon, Haricot",2);
+    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Poke Bowl Daurade", "./Images/poke-bowl-daurade.png", 18, "Daurade, Haricot, epinard",5);
+    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Maki Yellow Ponzu", "./Images/maki-yellowtail-ponzu.png", 20, "Feuille seche, Ponzu",4);
+    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Maki thon spicy", "./Images/maki-thon-spicy.png", 23, "Thon, Piment, Herbe douces",4);
+    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Lunch Box 3", "./Images/lunch-box-3.png", 12, "Riz, poisson, viande",1);
+    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Lunch Box 6", "./Images/lunch-box-6.png", 24, "Saumon, Haricot",1);
+    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Gourmet Mix", "./Images/gourmet-mix.png", 20, "Pate, , riz, feuille",3);
+    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "California saumon wasabi", "./Images/california-saumon-a-wasabi-de-.png", 10, "Saumon, Haricot",3);
+    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "ceviche de Daurade", "./Images/ceviche-de-daurade-a-leche-de-.png", 13, "Poissons, Haricot",3);
+    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Sashimi Yellow", "./Images/sashimi-yellowtail.png", 15, "Ecrevise, Haricot",2);
+    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Sushi Yellow", "./Images/sushi-yellowtail.png", 26, "Canard, Haricot",2);
+    db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Sushi Yellow tail Safran", "./Images/sushi-yellowtail-safran-a-fleu.png", 20, "Poisson clown, Haricot",2);
 
     
     

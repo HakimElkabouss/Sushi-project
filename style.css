@@ -19,9 +19,9 @@ margin-right: 100px;
 }
 
 
-#main h1, form{
+#main h1{
     text-align: center;
-    margin-top: 200px;
+    margin-top: 100px;
     font-size: 80px;
     font-family: 'Arvo', serif;
     display:flex;
@@ -31,15 +31,12 @@ margin-right: 100px;
     margin-left: 10%;
     z-index: 1;
 }
-#main form {
+#main a {
     position: absolute;
-    margin-top: 350px;
+    margin-bottom: 500px;
     margin-left: 420px;
 }
-/* #main button{
-    
-    
-} */
+
 
 #divVide{
     background: white;
@@ -54,9 +51,12 @@ margin-right: 100px;
     opacity: 0.8;
 }
 
-#main button{
+#main a{
     width: 80px;
     height: 40px;
+    text-align: center;
+    margin-left: 100px;
+    position: absolute;
 }
 hr{
     background-color: darkmagenta;
@@ -64,11 +64,14 @@ hr{
     height: 50%;
 }
 
-#All{
+/* #All{
     display: flex;
     flex-direction: column;
     margin-top: 50px;
     background-color: aliceblue
+} */
+#All{
+    display: inline-block;
 }
 #All img{
     border: 5px solid black;
@@ -77,34 +80,222 @@ hr{
     font-family: 'Indie Flower', cursive;
     font-size: 40px;
     font-weight: bold;
-    
 }
 #All h1{
-    font-family: 'Margarine', cursive;
+    font-family: 'Dosis', sans-serif;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: darkmagenta;
+    /* align-self: center; */
+    text-shadow: 2px 2px rgb(138, 138, 138);
+    font-weight: bold;
+}
+#All img{
+    /* align-self: center; */
+}
+#All p, button{
+    /* align-self: flex-end; */
+    margin-right: 20px;
+}
+#All h6{
+    /* align-self: center; */
+    margin-top: 20px;
+
+} 
+
+
+#Lunch{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    background-color: aliceblue
+}
+#Lunch img{
+    border: 5px solid black;
+}
+#Lunch p{
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    
+}
+#Lunch h1{
+    font-family: 'Dosis', sans-serif;
     padding: 20px;
     margin-bottom: 20px;
     color: darkmagenta;
     align-self: center;
+    text-shadow: 2px 2px rgb(138, 138, 138);
+    font-weight: bold;
 }
-#All img{
-    align-self: flex-start;
+#Lunch img{
+    align-self: center;
 }
-#All p, button{
+#Lunch p, button{
     align-self: flex-end;
     margin-right: 20px;
 }
-#All h6{
-    align-self: baseline;
+#Lunch h6{
+    align-self: center;
     margin-top: 20px;
 
 }
-#contact button{
+
+#Yellow{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    background-color: aliceblue
+}
+#Yellow img{
+    border: 5px solid black;
+}
+#Yellow p{
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    
+}
+#Yellow h1{
+    font-family: 'Dosis', sans-serif;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: darkmagenta;
+    align-self: center;
+    text-shadow: 2px 2px rgb(138, 138, 138);
+    font-weight: bold;
+}
+#Yellow img{
+    align-self: center;
+}
+#Yellow p, button{
+    align-self: flex-end;
+    margin-right: 20px;
+}
+#Yellow h6{
+    align-self: center;
+    margin-top: 20px;
 
 }
-#contact h1{
-    text-align: center;
-    margin-top: 60px;
+
+#Sushi{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    background-color: aliceblue
 }
-#contact textarea{
-   
+#Sushi img{
+    border: 5px solid black;
+}
+#Sushi p{
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    
+}
+#Sushi h1{
+    font-family: 'Dosis', sans-serif;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: darkmagenta;
+    align-self: center;
+    text-shadow: 2px 2px rgb(138, 138, 138);
+    font-weight: bold;
+}
+#Sushi img{
+    align-self: center;
+}
+#Sushi p, button{
+    align-self: flex-end;
+    margin-right: 20px;
+}
+#Sushi h6{
+    align-self: center;
+    margin-top: 20px;
+
+}
+
+#Maki{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    background-color: aliceblue
+}
+#Maki img{
+    border: 5px solid black;
+}
+#Maki p{
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    
+}
+#Maki h1{
+    font-family: 'Dosis', sans-serif;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: darkmagenta;
+    align-self: center;
+    text-shadow: 2px 2px rgb(138, 138, 138);
+    font-weight: bold;
+}
+#Maki img{
+    align-self: center;
+}
+#Maki p, button{
+    align-self: flex-end;
+    margin-right: 20px;
+}
+#Maki h6{
+    align-self: center;
+    margin-top: 20px;
+
+}
+
+#Bowl{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    background-color: aliceblue
+}
+#Bowl img{
+    border: 5px solid black;
+}
+#Bowl p{
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    
+}
+#Bowl h1{
+    font-family: 'Dosis', sans-serif;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: darkmagenta;
+    align-self: center;
+    text-shadow: 2px 2px rgb(138, 138, 138);
+    font-weight: bold;
+}
+#Bowl img{
+    align-self: center;
+}
+#Bowl p, button{
+    align-self: flex-end;
+    margin-right: 20px;
+}
+#Bowl h6{
+    align-self: center;
+    margin-top: 20px;
+
+}
+
+#contact button{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+#comments{
+    margin-top: 40px;
+
 }
