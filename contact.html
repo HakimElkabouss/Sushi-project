@@ -58,15 +58,22 @@
     <div id="contact">
     
     <form method="post">
-        <textarea id="comment" rows="3" cols="20" name="comment_name" style="resize: none;"></textarea>
+        <label>Name:</label>
+        <textarea id="name" rows="1" cols="3" name="comment_name"></textarea>
+        <label>Comment:</label>
+        <textarea id="comment" rows="1" cols="5" name="comment_desc" style="resize: none;"></textarea>
+
         <button value="send" type="button" onclick="send()" >Send</button>
-        <button value="delete" type="button" onclick="supp()">Delete</button>
+        <!-- <button value="delete" type="button" onclick="supp()">Delete</button> -->
     </form>
     </div>
 
-    <div id="Comments">
+    <div id="Names">
 
     </div>
+    <div id="Comments">
+    </div>
+
 
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

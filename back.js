@@ -14,6 +14,10 @@ app.use(bodyParser.json());
 
 db.serialize(() =>{
     db.run('CREATE TABLE IF NOT EXISTS products (product_id INTEGER PRIMARY KEY AUTOINCREMENT, product_name TEXT, product_img TEXT, product_price INTEGER, product_description TEXT, category_id INTEGER, FOREIGN KEY(category_id) REFERENCES category(id) )');
+
+
+
+    
     db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Poke Bowl Saumon", "./Images/poke-bowl-saumon-detox.png", 12, "Saumon, Haricot",5);
     db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Poke Bowl Daurade", "./Images/poke-bowl-daurade.png", 15, "Saumon, Haricot",5);
     db.run('INSERT INTO products (product_name, product_img, product_price, product_description, category_id) VALUES (?,?,?,?,?)', "Maki Yellow Ponzu", "./Images/maki-yellowtail-ponzu.png", 12, "Saumon, Haricot",4);
@@ -40,11 +44,11 @@ db.serialize(() =>{
     db.run('INSERT INTO category (category_name) VALUES (?)', "Bowl");
     db.run('INSERT INTO category (category_name) VALUES (?)', "Boissons");
 
-    db.run('CREATE TABLE comments (comment_id INTEGER PRIMARY KEY AUTOINCREMENT, comment_name VARCHAR(200))');
+    db.run('CREATE TABLE IF NOT EXISTS comments (comment_id INTEGER PRIMARY KEY AUTOINCREMENT, comment_name VARCHAR(200), comment_desc TEXT)');
     
 
-
-   
+    db.run('CREATE TABLE IF NOT EXISTS checkout (checkout_id INTEGER PRIMARY KEY AUTOINCREMENT, product_id INTEGER, FOREIGN KEY(product_id) REFERENCES products(id)  )');
+    
 
 })
 
@@ -91,6 +95,40 @@ app.get('/Bowl', function (req, res){
     })
 });
 
+app.get('/checkout', function (req, res){
+    db.all('SELECT * FROM checkout NATURAL JOIN products', function (error, data){
+        if (!error) res.send(data)
+        else console.log(error);  
+    })
+});
+
+app.get('/contact',function (request, response){
+    db.all('SELECT * FROM comments', function (error, data){
+        response.send(data);
+     });
+});
+
+
+app.post('/checkout', function (request, response){
+    db.run('INSERT INTO checkout (product_id) VALUES (?)', request.body.product_id, function(error , data){
+        console.log(request.body.product_id);
+    })
+})
+
+ app.post('/contact', function(request, response) {
+    db.run('INSERT INTO comments (comment_desc, comment_name) VALUES (?, ?)', request.body.comment_desc, request.body.comment_name, function(error, data){
+       console.log(request.body.comment_desc);
+       console.log(request.body.comment_name);
+        });
+
+});
+
+app.post('/delete', function(request, response){
+    db.run('DELETE INTO comments (comment_desc, comment_name) VALUES (?, ?)', request.body.comment_desc, request.body.comment_name, function (error, data){
+        response.send(request.body.comment_desc, request.body.comment_name);
+    })
+});
+
 
 
 // app.post('/checkout', function(request,response){
@@ -99,19 +137,6 @@ app.get('/Bowl', function (req, res){
 //       response.send(request.body.product_name);
 //    })
 //  })
-
-app.get('/contact',function (request, response){
-    db.all('SELECT * FROM comments', function (error, data){
-         response.send(data);
-     });
-});
-
- app.post('/contact', function(request, response) {
-    db.run('INSERT INTO comments (comment_name) VALUES (?)', request.body.comment_name, function(error, data){
-        response.send(request.body.comment_name);
-    });
-
-});
 
 
 
